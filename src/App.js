@@ -7,7 +7,7 @@ import Preview from './Preview';
 //not sure why I need this import, but it removes some errors
 import "ace-builds/webpack-resolver";
 
-require("ace-builds/src-noconflict/mode-css");
+require("ace-builds/src-noconflict/mode-markdown");
 require("ace-builds/src-noconflict/theme-github");
 
 
@@ -36,7 +36,7 @@ function App() {
         <div className="container">
             <div className= "editor">
                 <AceEditor
-                    mode="css"
+                    mode="markdown"
                     width="100%"
                     height="100%"
                     value={code}
