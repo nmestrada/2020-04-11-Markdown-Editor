@@ -1,7 +1,7 @@
 import React from 'react'
 import './Editor.css';
 import AceEditor from "react-ace";
-//not sure why I need this import, but it removes some errors
+//not sure why I need this import, but it removes some errors, has to do with Ace Editor itself?
 import "ace-builds/webpack-resolver";
 
 require("ace-builds/src-noconflict/mode-markdown");
@@ -21,7 +21,13 @@ const Editor = ({code, onChange}) => {
                     showPrintMargin={false}
                     onChange={onChange}
                     name="ace-editor"
-                    setOptions={{ showLineNumbers: true }}
+                    setOptions={{ 
+                        showLineNumbers: true,
+                        enableBasicAutocompletion: false,
+                        enableLiveAutocompletion: false,
+                        enableSnippets: false,
+                        tabSize: 2,
+                     }}
                     editorProps={{ $blockScrolling: false }}
                 />
             </div>

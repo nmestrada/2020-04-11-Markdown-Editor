@@ -26,7 +26,6 @@ const App = () => {
 
   return (
     <div className="App">
-        <h1 className="m-auto py-3">Live Markdown Editor</h1>
         <div className="container ">
            <Editor code={code} onChange={onChange}/>
            <Preview html={html}/>
